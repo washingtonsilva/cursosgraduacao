@@ -22,25 +22,31 @@ ExpData(data = dados, type=2) # Type = 2 - Estrutura dos dados
 
 # Definindo o tipo de cada variavel
 
-dados$CURSO  <- as.factor(dados$CURSO)
-dados$TURMA_INGRESSO <- as.factor(dados$TURMA_INGRESSO)
-dados$`PERÍODO LETIVO`<- as.factor(dados$`PERÍODO LETIVO`)
+dados$CURSO  <- factor(dados$CURSO)
+dados$TURMA_INGRESSO <- factor(dados$TURMA_INGRESSO)
+dados$PERIODO_LETIVO<- factor(dados$PERIODO_LETIVO)
 dados$MATRICULAS_INICIAS <- as.numeric(dados$MATRICULAS_INICIAS)
 dados$EVASÃO <- as.numeric(dados$EVASÃO)
 dados$TRANCAMENTO <- as.numeric(dados$TRANCAMENTO)
 dados$RETIDOS_CICLO  <- as.numeric(dados$RETIDOS_CICLO)
 dados$CONCLUINTES <- as.numeric(dados$CONCLUINTES)
-dados$`TAXA DE EVASÃO` <- as.numeric(dados$`TAXA DE EVASÃO`)
+dados$TAXA_DE_EVASAO <- as.numeric(dados$TAXA_DE_EVASAO)
 dados$MATRICULADOS_CICLO_TURMA <- as.numeric(dados$MATRICULADOS_CICLO_TURMA)
-dados$`TAXA DE RETENÇÃO CICLO` <- as.numeric(dados$`TAXA DE RETENÇÃO CICLO`)# 
+dados$TAXA_DE_RETENCAO <- as.numeric(dados$TAXA_DE_RETENCAO) 
 
 # Alterando variaveis EVASAO E TAXA DE RETENCAO para % (*100)
-dados$`TAXA DE EVASÃO` <- dados$`TAXA DE EVASÃO`*100
-dados$`TAXA DE RETENÇÃO CICLO` <- dados$`TAXA DE RETENÇÃO CICLO`*100
+dados$TAXA_DE_EVASAO <- dados$TAXA_DE_EVASAO*100
+dados$TAXA_DE_RETENCAO <- dados$TAXA_DE_RETENCAO*100
 
 # Verificando a nova estrutura
 ExpData(data = dados, type=2) 
 plot_missing(dados) 
+
+# Estrutura dos dados com SmartEDA
+sink("sink-ExpData.txt")
+SmartEDA::ExpData(data = dados, type=1)
+SmartEDA::ExpData(data = dados, type=2)
+sink()
 
 # Salvando arquivos com miss data 
 setwd("C:\\Users\\polo\\Desktop\\GitHub\\Graduacao\\data.analysis")
