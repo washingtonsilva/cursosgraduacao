@@ -11,7 +11,7 @@ library(gganimate)
 
 # Selecionando CURSO
 
-Engenharia <- filter(dados, CURSO == "ENGENHARIA", )
+Engenharia <- filter(dados, CURSO == "ENGENHARIA")
 Engenharia
 
 # ggplot2
