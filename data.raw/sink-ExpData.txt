@@ -1,8 +1,8 @@
                                 Descriptions      Obs
 1                         Sample size (Nrow)       84
 2                    No. of Variables (Ncol)        8
-3                   No. of Numeric Variables        5
-4                    No. of Factor Variables        3
+3                   No. of Numeric Variables        6
+4                    No. of Factor Variables        2
 5                      No. of Text Variables        0
 6                   No. of Logical Variables        0
 7                      No. of Date Variables        0
@@ -11,12 +11,12 @@
 10 %. of Variables having <50% missing cases   0% (0)
 11 %. of Variables having >50% missing cases   0% (0)
 12 %. of Variables having >90% missing cases   0% (0)
-  S.no        Variable Name Variable Type % of Missing No. of Unique values
-1    1               curso*        factor            0                    5
-2    2      periodo_letivo*        factor            0                   20
-3    3 matriculas_iniciais*        factor            0                   66
-4    4               evasao       numeric            0                   23
-5    5          trancamento       numeric            0                   11
-6    6              retidos       numeric            0                   32
-7    7          concluintes       numeric            0                   16
-8    8          taxa_evasao       numeric            0                   79
+  S.no       Variable Name Variable Type % of Missing No. of Unique values
+1    1              curso*        factor            0                    5
+2    2     periodo_letivo*        factor            0                   20
+3    3 matriculas_iniciais       numeric            0                   66
+4    4              evasao       numeric            0                   23
+5    5         trancamento       numeric            0                   11
+6    6             retidos       numeric            0                   32
+7    7         concluintes       numeric            0                   16
+8    8         taxa_evasao       numeric            0                   79

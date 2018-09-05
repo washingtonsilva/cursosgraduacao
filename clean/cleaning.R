@@ -24,7 +24,7 @@ ExpData(data = dados_grad, type=2) # Type = 2 - Estrutura dos dados
 
 dados_grad$curso  <- factor(dados_grad$curso)
 dados_grad$periodo_letivo <- factor(dados_grad$periodo_letivo)
-dados_grad$matriculas_iniciais <- factor(dados_grad$matriculas_iniciais)
+dados_grad$matriculas_iniciais <- as.numeric(dados_grad$matriculas_iniciais)
 dados_grad$evasao <- as.numeric(dados_grad$evasao)
 dados_grad$trancamento <- as.numeric(dados_grad$trancamento)
 dados_grad$retidos <- as.numeric(dados_grad$retidos)
