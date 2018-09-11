@@ -1,0 +1,270 @@
+---
+title: "Indicadores Educacionais: Cursos Técnicos Integrados"
+subtitle: "IFMG - Campus Formiga"
+author: "Diretoria-Geral & Coordenadoria de Registro e Controle Acadêmico"
+date: "11 de setembro de 2018"
+output:
+  ioslides_presentation: 
+  incremental: true
+  widescreen: true
+  smaller: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Indicadores
+
+---
+
+> - **Matrículas Inicias** = Total de alunos que se matricularam no perÍodo letivo.
+
+> - **Alunos Retidos** = Total de alunos reprovados e que trancaram matrícula no 
+período letivo.
+
+> - **Taxa de Retenção** = $(\frac{\textrm{Alunos Retidos}}{\textrm{Matrículas Iniciais no Período Letivo}})*100$	
+
+> - **Alunos Evadidos** = Total de alunos em situações de transferência interna, externa, evasão (não renovação de matrícula) e desligamento (desistência formal)	
+
+> - **Taxa de Evasão** =  $(\frac{Evasão}{\textrm{Matrículas Iniciais no Período Letivo}})*100$
+
+# Técnico Integrado em Administração
+
+## Alunos Matriculados 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+load("dados_tec.RData")
+
+# Pacotes que serao utilizados
+library(tidyverse)
+library(ggplot2)
+library(ggthemes)
+library(plotly)
+library(gganimate)
+library(showtext)
+
+# Selecionando CURSO via dplyr::filter
+adm <- filter(dados_tec, curso == "Técnico em Administração Integrado")
+eletro <- filter(dados_tec, curso == "Técnico em Informática Integrado")
+info <- filter(dados_tec, curso == "Técnico em Eletrotécnica Integrado")
+
+p1 <- ggplot(data = adm, aes(x = periodo_letivo, y = matriculas_iniciais, group = curso)) + geom_point() + geom_line() 
+
+p1 <- p1 + labs(title = "Técnico Integrado em Administração") +
+                  labs(x = " ", y = "Alunos Matriculados")
+ggplotly(p1)
+```
+
+## Alunos Concluintes
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p2 <- ggplot(data = adm, aes(x = periodo_letivo, y = concluintes, group = curso)) + geom_point() + geom_line() 
+
+p2 <- p2 + labs(title = "Técnico Integrado em Administração") +
+                  labs(x = " ", y = "Concluintes")
+
+ggplotly(p2)
+```
+
+## Retenção
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p3 <- ggplot(data = adm, aes(x = periodo_letivo, y = retidos, group = curso)) + geom_point() + geom_line() 
+
+p3 <- p3 + labs(title = "Técnico Integrado em Administração") +
+                  labs(x = " ", y = "Alunos Retidos")
+
+ggplotly(p3)
+```
+
+## Taxa de Retenção (%) 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p4 <- ggplot(data = adm, aes(x = periodo_letivo, y = taxa_retencao, group = curso)) + geom_point() + geom_line() 
+
+p4 <- p4 + labs(title = "Técnico Integrado em Administração") +
+                  labs(x = " ", y = "Taxa de Retenção (em %)")
+
+ggplotly(p4)
+```
+
+## Evasão 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p5 <- ggplot(data = adm, aes(x = periodo_letivo, y = evasao, group = curso)) + geom_point() + geom_line() 
+
+p5 <- p5 + labs(title = "Técnico Integrado em Administração") +
+                  labs(x = " ", y = "Alunos Evadidos")
+
+ggplotly(p5)
+```
+
+## Taxa de Evasão (%) 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p6 <- ggplot(data = adm, aes(x = periodo_letivo, y = taxa_evasao, group = curso)) + geom_point() + geom_line() 
+
+p6 <- p6 + labs(title = "Técnico Integrado em Administração") +
+                  labs(x = " ", y = "Taxa de Evasão (em %)")
+
+ggplotly(p6)
+```
+
+# Técnico Integrado em Eletrotécnica
+
+## Alunos Matriculados 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p7 <- ggplot(data = eletro, aes(x = periodo_letivo, y = matriculas_iniciais, group = curso)) + geom_point() + geom_line() 
+
+p7 <- p7 + labs(title = "Técnico Integrado em Eletrotécnica") +
+                  labs(x = " ", y = "Alunos Matriculados")
+
+ggplotly(p7)
+```
+
+## Alunos Concluintes
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p8 <- ggplot(data = eletro, aes(x = periodo_letivo, y = concluintes, group = curso)) + geom_point() + geom_line() 
+
+p8 <- p8 + labs(title = "Técnico Integrado em Eletrotécnica") +
+                  labs(x = " ", y = "Concluintes")
+
+ggplotly(p8)
+```
+
+## Retenção
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p9 <- ggplot(data = eletro, aes(x = periodo_letivo, y = retidos, group = curso)) + geom_point() + geom_line() 
+
+p9 <- p9 + labs(title = "Técnico Integrado em Eletrotécnica") +
+                  labs(x = " ", y = "Alunos Retidos")
+
+ggplotly(p9)
+```
+
+## Taxa de Retenção (%)
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p10 <- ggplot(data = eletro, aes(x = periodo_letivo, y = taxa_retencao, group = curso)) + geom_point() + geom_line() 
+
+p10 <- p10 + labs(title = "Técnico Integrado em Eletrotécnica") +
+                  labs(x = " ", y = "Taxa de Retenção (%)")
+
+ggplotly(p10)
+```
+
+## Evasão 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p11 <- ggplot(data = eletro, aes(x = periodo_letivo, y = evasao, group = curso)) + geom_point() + geom_line() 
+
+p11 <- p11 + labs(title = "Técnico Integrado em Eletrotécnica") +
+                  labs(x = " ", y = "Alunos Evadidos")
+
+ggplotly(p11)
+```
+
+## Taxa de Evasão (%) 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p12 <- ggplot(data = eletro, aes(x = periodo_letivo, y = taxa_evasao, group = curso)) + geom_point() + geom_line() 
+
+p12 <- p12 + labs(title = "Técnico Integrado em Eletrotécnica") +
+                  labs(x = " ", y = "Taxa de Evasão (em %)")
+
+ggplotly(p12)
+```
+
+# Técnico Integrado em Informática
+
+## Alunos Matriculados
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p13 <- ggplot(data = info, aes(x = periodo_letivo, y = matriculas_iniciais, group = curso)) + geom_point() + geom_line() 
+
+p13 <- p13 + labs(title = "Técnico Integrado em Informática") +
+                  labs(x = " ", y = "Alunos Matriculados")
+
+ggplotly(p13)
+```
+
+## Alunos Concluintes 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p14 <- ggplot(data = info, aes(x = periodo_letivo, y = concluintes, group = curso)) + geom_point() + geom_line() 
+
+p14 <- p14 + labs(title = "Técnico Integrado em Informática") +
+                  labs(x = " ", y = "Concluintes")
+
+ggplotly(p14)
+```
+
+## Retenção
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p15 <- ggplot(data = info, aes(x = periodo_letivo, y = retidos, group = curso)) + geom_point() + geom_line() 
+
+p15 <- p15 + labs(title = "Técnico Integrado em Informática") +
+                  labs(x = " ", y = "Alunos Retidos")
+
+ggplotly(p15)
+```
+
+## Taxa de Retenção (%) 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p16 <- ggplot(data = info, aes(x = periodo_letivo, y = taxa_retencao, group = curso)) + geom_point() + geom_line() 
+
+p16 <- p16 + labs(title = "Técnico Integrado em Informática") +
+                  labs(x = " ", y = "Taxa de Retenção (%)")
+
+ggplotly(p16)
+```
+
+## Evasão
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p17 <- ggplot(data = info, aes(x = periodo_letivo, y = evasao, group = curso)) + geom_point() + geom_line() 
+
+p17 <- p17 + labs(title = "Técnico Integrado em Informática") +
+                  labs(x = " ", y = "Alunos Evadidos")
+
+ggplotly(p17)
+```
+
+## Taxa de Evasão (%) 
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+
+p18 <- ggplot(data = info, aes(x = periodo_letivo, y = taxa_evasao, group = curso)) + geom_point() + geom_line() 
+
+p18 <- p18 + labs(title = "Técnico Integrado em Informática") +
+                  labs(x = " ", y = "Taxa de Evasão (em %)")
+
+ggplotly(p18)
+```
+
+
+
+
+
