@@ -14,20 +14,51 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Indicadores
+# Notas sobre os Indicadores
 
 ---
 
-> - **Matrículas Inicias** = Total de alunos que se matricularam no perÍodo letivo.
+> - <font size="3"> O Tribunal de Contas da União (TCU), por meio do Acórdão 2.267/2005, determinou às Instituições da Rede Federal de Educação Profissional, Científica e Tecnológica que incluam no relatório de gestão das contas anuais, a partir de 2005, um conjunto de indicadores de gestão, acompanhados dos dados primários relativos aos componentes necessários ao seu cálculo e a análise sobre os dados.  </font>
 
-> - **Alunos Retidos** = Total de alunos reprovados e que trancaram matrícula no 
-período letivo.
+> - <font size="3"> No mesmo Acórdão, o TCU determinou à Secretaria de Educação Profissional e Tecnológica (SETEC/MEC) que inclua, no relatório de gestão das contas anuais, apreciação crítica sobre a evolução dos dados (indicadores e componentes), com base em análise consolidada das informações apresentadas pelas Instituições da Rede Federal.  </font>
+
+
+> - Os relatórios de gestão da SETEC podem ser acessados [neste link](http://portal.mec.gov.br/escola-de-gestores-da-educacao-basica/190-secretarias-112877938/setec-1749372213/21519-analise-de-indicadores)
+
+> - Os relatórios de gestão do IFMG podem ser acessdos [neste link](https://www.ifmg.edu.br/portal/acesso-a-informacao/auditorias/pagina-sobre-auditorias)
+
+---
+
+> - A descrição e cálculo dos indicadores podem ser encontrados no [Manual para Cálculo dos Indicadores de Gestão da Rede Federal](http://sitesistec.mec.gov.br/images/arquivos/pdf/manual_de_indicadores_da_rfepct_2016.pdf)
+
+> - O banco de dados do IFMG - Campus Formiga necessário para o cálculo dos indicadores de gestão é extraídos do Módulo Eduacional do IFMG e exportado para o [Sistema Nacional de Informações da Educação Profissional e Tecnológica (SISTEC)](http://sitesistec.mec.gov.br/) pela Coordenadora de Registro e Controle Acadêmico e Pesquisadora Institucional do campus, Elaine Belo.
+
+> - A Portaria SETEC/MEC N. 1 de 3/1/2018, instituiu a [Plataforma Nilo Peçanha](https://www.plataformanilopecanha.org/) que, alimentada com os dados do SISTEC, disponibiliza via web os indicadores de gestão para todas as instituições da Rede Federal.
+
+---
+
+> - De forma a disponibilizar para a Diretoria de Ensino, coordenadores e órgãos colegiados dos cursos, indicadores mais apropriados para um acompanhamento detalhado dos cursos, a Coordenadoria de Registro e Controle Acadêmico e a Diretoria-Geral desenvolvem um projeto que visa a produção de indicadores adaptados mas baseados nos mesmos dados e na mesma lógica conceitual dos [indicadores de gestão da Rede Federal](http://sitesistec.mec.gov.br/images/arquivos/pdf/manual_de_indicadores_da_rfepct_2016.pdf).
+
+> - Nesta primeira etapa são disponibilizados **indicadores globais da evolução dos alunos matriculados, concluintes, retidos e evadidos**, além das **taxas de retenção e evasão**, para cada um dos cursos técnicos integrados ofertados atualmente pelo campus. 
+
+> - Nas próximas etapas pretende-se disponibilizar um aplicativo web para a visualização dos dados e indicadores por turma de ingressantes de cada curso, além de captar os efeitos da mudança de duração de 4 para 3 anos dos cursos técnicos integrados.
+
+---
+### Definição e cálculo dos indicadores propostos:
+
+> - **Alunos Matriculados** = Total de alunos que se matricularam no ano letivo.
+
+> - **Alunos Concluintes** = Total de alunos que concluíram o curso no tempo regular.
+
+> - **Alunos Retidos** = Total de alunos reprovados ou que trancaram matrícula no 
+ano letivo.
 
 > - **Taxa de Retenção** = $(\frac{\textrm{Alunos Retidos}}{\textrm{Matrículas Iniciais no Período Letivo}})*100$	
 
-> - **Alunos Evadidos** = Total de alunos em situações de transferência interna, externa, evasão (não renovação de matrícula) e desligamento (desistência formal)	
+> - **Alunos Evadidos** = Total de alunos em situações de transferência interna, externa, evasão (não renovação de matrícula) e desligamento (desistência formal) no ano letivo.	
 
-> - **Taxa de Evasão** =  $(\frac{Evasão}{\textrm{Matrículas Iniciais no Período Letivo}})*100$
+> - **Taxa de Evasão** =  $(\frac{\textrm{Alunos Evadidos}}{\textrm{Matrículas Iniciais no Ano Letivo}})*100$
+
 
 # Técnico Integrado em Administração
 
@@ -56,6 +87,8 @@ p1 <- p1 + labs(title = "Técnico Integrado em Administração") +
 ggplotly(p1)
 ```
 
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 ## Alunos Concluintes
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
@@ -68,7 +101,9 @@ p2 <- p2 + labs(title = "Técnico Integrado em Administração") +
 ggplotly(p2)
 ```
 
-## Retenção
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
+## Retenção: Alunos Retidos
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -79,6 +114,8 @@ p3 <- p3 + labs(title = "Técnico Integrado em Administração") +
 
 ggplotly(p3)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 ## Taxa de Retenção (%) 
 
@@ -92,7 +129,9 @@ p4 <- p4 + labs(title = "Técnico Integrado em Administração") +
 ggplotly(p4)
 ```
 
-## Evasão 
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
+## Evasão: Alunos Evadidos
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -103,6 +142,8 @@ p5 <- p5 + labs(title = "Técnico Integrado em Administração") +
 
 ggplotly(p5)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 ## Taxa de Evasão (%) 
 
@@ -115,6 +156,8 @@ p6 <- p6 + labs(title = "Técnico Integrado em Administração") +
 
 ggplotly(p6)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 # Técnico Integrado em Eletrotécnica
 
@@ -130,6 +173,8 @@ p7 <- p7 + labs(title = "Técnico Integrado em Eletrotécnica") +
 ggplotly(p7)
 ```
 
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 ## Alunos Concluintes
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
@@ -142,7 +187,9 @@ p8 <- p8 + labs(title = "Técnico Integrado em Eletrotécnica") +
 ggplotly(p8)
 ```
 
-## Retenção
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
+## Retenção: Alunos Retidos
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -153,6 +200,8 @@ p9 <- p9 + labs(title = "Técnico Integrado em Eletrotécnica") +
 
 ggplotly(p9)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 ## Taxa de Retenção (%)
 
@@ -166,7 +215,9 @@ p10 <- p10 + labs(title = "Técnico Integrado em Eletrotécnica") +
 ggplotly(p10)
 ```
 
-## Evasão 
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
+## Evasão: Alunos Evadidos
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -177,6 +228,8 @@ p11 <- p11 + labs(title = "Técnico Integrado em Eletrotécnica") +
 
 ggplotly(p11)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 ## Taxa de Evasão (%) 
 
@@ -189,6 +242,8 @@ p12 <- p12 + labs(title = "Técnico Integrado em Eletrotécnica") +
 
 ggplotly(p12)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 # Técnico Integrado em Informática
 
@@ -204,6 +259,8 @@ p13 <- p13 + labs(title = "Técnico Integrado em Informática") +
 ggplotly(p13)
 ```
 
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 ## Alunos Concluintes 
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
@@ -216,7 +273,9 @@ p14 <- p14 + labs(title = "Técnico Integrado em Informática") +
 ggplotly(p14)
 ```
 
-## Retenção
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
+## Retenção: Alunos Retidos
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -227,6 +286,8 @@ p15 <- p15 + labs(title = "Técnico Integrado em Informática") +
 
 ggplotly(p15)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 ## Taxa de Retenção (%) 
 
@@ -240,7 +301,9 @@ p16 <- p16 + labs(title = "Técnico Integrado em Informática") +
 ggplotly(p16)
 ```
 
-## Evasão
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
+## Evasão: Alunos Evadidos
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -251,6 +314,8 @@ p17 <- p17 + labs(title = "Técnico Integrado em Informática") +
 
 ggplotly(p17)
 ```
+
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 ## Taxa de Evasão (%) 
 
@@ -264,7 +329,7 @@ p18 <- p18 + labs(title = "Técnico Integrado em Informática") +
 ggplotly(p18)
 ```
 
-
+<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
 
 
 
