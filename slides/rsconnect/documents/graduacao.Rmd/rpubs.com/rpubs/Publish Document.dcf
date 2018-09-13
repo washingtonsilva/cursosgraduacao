@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/419295/05635813018f4a5fa22e4c3dfc10ad32
+bundleId: https://api.rpubs.com/api/v1/document/419295/05635813018f4a5fa22e4c3dfc10ad32
+url: http://rpubs.com/washington_silva/419295
+when: 1536869037.99101

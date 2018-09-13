@@ -31,9 +31,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > - A descrição e cálculo dos indicadores podem ser encontrados no [Manual para Cálculo dos Indicadores de Gestão da Rede Federal](http://sitesistec.mec.gov.br/images/arquivos/pdf/manual_de_indicadores_da_rfepct_2016.pdf)
 
-> - O banco de dados do IFMG - Campus Formiga necessário para o cálculo dos indicadores de gestão é extraídos do Módulo Eduacional do IFMG e exportado para o [Sistema Nacional de Informações da Educação Profissional e Tecnológica (SISTEC)](http://sitesistec.mec.gov.br/) pela Coordenadora de Registro e Controle Acadêmico e Pesquisadora Institucional do campus, Elaine Belo.
+> - O banco de dados do IFMG - Campus Formiga necessário para o cálculo dos indicadores de gestão é extraído do Módulo Eduacional do IFMG e inserido no [Sistema Nacional de Informações da Educação Profissional e Tecnológica (SISTEC)](http://sitesistec.mec.gov.br/) pela Coordenadora de Registro e Controle Acadêmico e Auxiliar de Pesquisadora Institucional do campus.
 
-> - A Portaria SETEC/MEC N. 1 de 3/1/2018, instituiu a [Plataforma Nilo Peçanha](https://www.plataformanilopecanha.org/) que, alimentada com os dados do SISTEC, disponibiliza via web os indicadores de gestão para todas as instituições da Rede Federal.
+> - A Portaria SETEC/MEC N. 1 de 3/1/2018, instituiu a [Plataforma Nilo Peçanha](https://www.plataformanilopecanha.org/) que, alimentada com os dados do SISTEC, disponibiliza via web os indicadores anuais de gestão para todas as instituições da Rede Federal.
 
 ---
 
@@ -48,7 +48,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > - **Alunos Matriculados** = Total de alunos que se matricularam no ano letivo.
 
-> - **Alunos Concluintes** = Total de alunos que concluíram o curso no tempo regular.
+> - **Alunos Concluintes** = Total de alunos que concluíram o curso.
 
 > - **Alunos Retidos** = Total de alunos reprovados ou que trancaram matrícula no 
 ano letivo.

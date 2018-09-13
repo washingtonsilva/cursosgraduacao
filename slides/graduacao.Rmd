@@ -31,9 +31,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > - A descrição e cálculo dos indicadores podem ser encontrados no [Manual para Cálculo dos Indicadores de Gestão da Rede Federal](http://sitesistec.mec.gov.br/images/arquivos/pdf/manual_de_indicadores_da_rfepct_2016.pdf)
 
-> - O banco de dados do IFMG - Campus Formiga necessário para o cálculo dos indicadores de gestão é extraídos do Módulo Eduacional do IFMG e exportado para o [Sistema Nacional de Informações da Educação Profissional e Tecnológica (SISTEC)](http://sitesistec.mec.gov.br/) pela Coordenadora de Registro e Controle Acadêmico e Pesquisadora Institucional do campus, Elaine Belo.
+> - O banco de dados do IFMG - Campus Formiga necessário para o cálculo dos indicadores de gestão é extraído do Módulo Eduacional do IFMG e inserido no [Sistema Nacional de Informações da Educação Profissional e Tecnológica (SISTEC)](http://sitesistec.mec.gov.br/) pela Coordenadora de Registro e Controle Acadêmico e Auxiliar de Pesquisadora Institucional do campus.
 
-> - A Portaria SETEC/MEC N. 1 de 3/1/2018, instituiu a [Plataforma Nilo Peçanha](https://www.plataformanilopecanha.org/) que, alimentada com os dados do SISTEC, disponibiliza via web os indicadores de gestão para todas as instituições da Rede Federal.
+> - A Portaria SETEC/MEC N. 1 de 3/1/2018, instituiu a [Plataforma Nilo Peçanha](https://www.plataformanilopecanha.org/) que, alimentada com os dados do SISTEC, disponibiliza via web os indicadores anuais de gestão para todas as instituições da Rede Federal.
 
 ---
 
@@ -49,7 +49,7 @@ inclusão de medida de taxa de retenção.
 
 > - <font size="4"> **Alunos Matriculados** = Total de alunos que se matricularam no semestre letivo. </font>
 
-> - <font size="4"> **Alunos Concluintes** = Total de alunos que concluíram o curso no tempo regular. </font>
+> - <font size="4"> **Alunos Concluintes** = Total de alunos que concluíram o curso. </font>
                              
 > - <font size="4"> **Trancamento de Matrícula** = Alunos que trancaram matrícula no semestre letivo. </font>
 
@@ -91,7 +91,7 @@ p1 <- p1 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p1)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Alunos Concluintes
 
@@ -107,7 +107,7 @@ p2 <- p2 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p2)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Trancamento de Matrícula 
 
@@ -123,7 +123,7 @@ p3 <- p3 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p3)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Retenção: Alunos Retidos
 
@@ -139,7 +139,7 @@ p4 <- p4 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p4)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Evasão: Alunos Evadidos
 
@@ -155,7 +155,7 @@ p5 <- p5 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p5)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Taxa de Evasão (%) 
 
@@ -171,7 +171,7 @@ p6 <- p6 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p6)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 # Bacharelado em Ciência da Computação
 
@@ -189,7 +189,7 @@ p7 <- p7 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p7)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Alunos Concluintes
 
@@ -205,7 +205,7 @@ p8 <- p8 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p8)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Trancamento de Matrícula
 
@@ -221,7 +221,7 @@ p9 <- p9 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p9)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Retenção: Alunos Retidos
 
@@ -237,7 +237,7 @@ p10 <- p10 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p10)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Evasão: Alunos Evadidos
 
@@ -253,7 +253,7 @@ p11 <- p11 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p11)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Taxa de Evasão (%)
 
@@ -269,7 +269,7 @@ p12 <- p12 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p12)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 # Bacharelado em Engenharia Elétrica
 
@@ -287,7 +287,7 @@ p13 <- p13 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p13)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Alunos Concluintes
 
@@ -303,7 +303,7 @@ p14 <- p14 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p14)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Trancamento de Matrícula
 
@@ -319,7 +319,7 @@ p15 <- p15 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p15)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Retenção: Alunos Retidos
 
@@ -335,7 +335,7 @@ p16 <- p16 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p16)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Evasão: Alunos Evadidos
 
@@ -351,7 +351,7 @@ p17 <- p17 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p17)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Taxa de Evasão (%)
 
@@ -367,7 +367,7 @@ p18 <- p18 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p18)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 # Superior de Tecnologia em Gestão Financeira
 
@@ -385,7 +385,7 @@ p19 <- p19 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p19)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Alunos Concluintes
 
@@ -401,7 +401,7 @@ p20 <- p20 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p20)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Trancamento de Matrícula
 
@@ -417,7 +417,7 @@ p21 <- p21 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p21)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Retenção: Alunos Retidos
 
@@ -433,7 +433,7 @@ p22 <- p22 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p22)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Evasão: Alunos Evadidos
 
@@ -449,7 +449,7 @@ p23 <- p23 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p23)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Taxa de Evasão (%)
 
@@ -465,7 +465,7 @@ p24 <- p24 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p24)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 # Licenciatura em Matemática
 
@@ -483,7 +483,7 @@ p25 <- p25 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p25)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Alunos Concluintes
 
@@ -499,7 +499,7 @@ p26 <- p26 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p26)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Trancamento de Matrícula
 
@@ -515,7 +515,7 @@ p27 <- p27 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p27)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Retenção: Alunos Retidos
 
@@ -531,7 +531,7 @@ p28 <- p28 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p28)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Evasão: Alunos Evadidos
 
@@ -547,7 +547,7 @@ p29 <- p29 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p29)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 ## Taxa de Evasão (%)
 
@@ -563,6 +563,6 @@ p30 <- p30 + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(p30)
 ```
 
-<font size="3"> **Obs.:** dados de janeiro à agosto para 2018 </font>
+
 
 
