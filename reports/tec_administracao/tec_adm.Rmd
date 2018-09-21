@@ -1,0 +1,102 @@
+---
+title: "Indicadores Educacionais: Curso Técnico Integrado em Administração"
+author: "Diretoria-Geral & Coordenadoria de Registro e Controle Acadêmico- IFMG Campus Formiga"
+date: "19 de Setembro de 2018"
+output: 
+  html_document:
+    theme: journal
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# 1. Notas sobre os Indicadores
+
+O Tribunal de Contas da União (TCU), por meio do Acórdão 2.267/2005, determinou às Instituições da Rede Federal de Educação Profissional, Científica e Tecnológica que incluam no relatório de gestão das contas anuais, a partir de 2005, um conjunto de indicadores de gestão, acompanhados dos dados primários relativos aos componentes necessários ao seu cálculo e a análise sobre os dados.
+
+No mesmo Acórdão, o TCU determinou à Secretaria de Educação Profissional e Tecnológica (SETEC/MEC) que inclua, no relatório de gestão das contas anuais, apreciação crítica sobre a evolução dos dados (indicadores e componentes), com base em análise consolidada das informações apresentadas pelas Instituições da Rede Federal.
+
+Os relatórios de gestão da SETEC podem ser acessados [neste link](http://portal.mec.gov.br/escola-de-gestores-da-educacao-basica/190-secretarias-112877938/setec-1749372213/21519-analise-de-indicadores)
+
+Os relatórios de gestão do IFMG podem ser acessdos [neste link](https://www.ifmg.edu.br/portal/acesso-a-informacao/auditorias/pagina-sobre-auditorias)
+
+A descrição e cálculo dos indicadores podem ser encontrados no [Manual para Cálculo dos Indicadores de Gestão da Rede Federal](http://sitesistec.mec.gov.br/images/arquivos/pdf/manual_de_indicadores_da_rfepct_2016.pdf)
+
+O banco de dados do IFMG - Campus Formiga necessário para o cálculo dos indicadores de gestão é extraído do Módulo Eduacional do IFMG e inserido no [Sistema Nacional de Informações da Educação Profissional e Tecnológica (SISTEC)](http://sitesistec.mec.gov.br/) pela Coordenadora de Registro e Controle Acadêmico e Auxiliar de Pesquisadora Institucional do campus.
+
+A Portaria SETEC/MEC N. 1 de 3/1/2018, instituiu a [Plataforma Nilo Peçanha](https://www.plataformanilopecanha.org/) que, alimentada com os dados do SISTEC, disponibiliza via web os indicadores anuais de gestão para todas as instituições da Rede Federal.
+
+De forma a disponibilizar para a Diretoria de Ensino, coordenadores e órgãos colegiados dos cursos, indicadores mais apropriados para um acompanhamento detalhado dos cursos, a Coordenadoria de Registro e Controle Acadêmico e a Diretoria-Geral desenvolvem um projeto que visa a produção de indicadores adaptados mas baseados nos mesmos dados e na mesma lógica conceitual dos [indicadores de gestão da Rede Federal](http://sitesistec.mec.gov.br/images/arquivos/pdf/manual_de_indicadores_da_rfepct_2016.pdf).
+
+Nesta primeira etapa são disponibilizados **indicadores globais da evolução dos alunos matriculados, concluintes, retidos e evadidos**, além das **taxas de retenção e evasão**, para cada um dos cursos técnicos integrados ofertados atualmente pelo campus. 
+
+Nas próximas etapas pretende-se disponibilizar um aplicativo web para a visualização dos dados e indicadores por turma de ingressantes de cada curso, além de captar os efeitos da mudança de duração de 4 para 3 anos dos cursos técnicos integrados.
+
+# 2.  Definição e cálculo dos indicadores propostos:
+
+**Alunos Matriculados** = Total de alunos que se matricularam no ano letivo.
+
+**Alunos Concluintes** = Total de alunos que concluíram o curso.
+
+**Alunos Retidos** = Total de alunos reprovados ou que trancaram matrícula no 
+ano letivo.
+
+**Taxa de Retenção** = $(\frac{\textrm{Alunos Retidos}}{\textrm{Matrículas Iniciais no Período Letivo}})*100$	
+
+**Alunos Evadidos** = Total de alunos em situações de transferência interna, externa, evasão (não renovação de matrícula) e desligamento (desistência formal) no ano letivo.	
+
+**Taxa de Evasão** =  $(\frac{\textrm{Alunos Evadidos}}{\textrm{Matrículas Iniciais no Ano Letivo}})*100$
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+load("dados_tec.RData")
+
+# Pacotes que serao utilizados
+library(tidyverse)
+library(DT)
+library(ggplot2)
+library(plotly)
+
+
+# Selecionando CURSO via dplyr::filter
+adm <- filter(dados_tec, curso == "Técnico em Administração Integrado")
+
+
+```
+
+# 3. Tabelas Interativas
+
+
+
+'01??## Tabela 1: 
+
+```{r, echo = FALSE}
+# pacote DT
+datatable(adm, rownames = FALSE, 
+          options = list(
+          initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+    "}"),
+  language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese.json')
+))
+```
+
+
+## Tabela 2: Evasão Total do Curso (por semestre) 
+
+```{r, echo = FALSE}
+# pacote DT
+datatable(totalf, rownames = FALSE, colnames = c("Evasão Total", "Evasão Acumulada", "Taxa de Evasão (%)"),
+        options = list(
+          initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+    "}"),
+  language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese.json')
+))
+```
+
