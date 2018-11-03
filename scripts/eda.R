@@ -1,15 +1,9 @@
 # Carregando os dados_grad_grad preparados para analise
 setwd("C:\\Users\\polo\\Desktop\\GitHub\\Graduacao\\data.analysis")
-load("dados_grad_grad_misscomp.RData")
+load("dados_tec.RData")
 
 # Pacotes que serao utilizados
 library(tidyverse)
-library(ggplot2)
-library(ggthemes)
-library(plotly)
-library(gganimate)
-library(showtext)
-
 
 # Selecionando CURSO via dplyr::filter()
 
